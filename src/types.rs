@@ -1,4 +1,5 @@
 use crate::color::Color;
+use crate::vector::Vec3;
 
 pub struct Viewport
 {
@@ -16,61 +17,6 @@ impl Viewport
         {
             extent: [1200, 1000],
             plane: [2.0, 2.0]
-        }
-    }
-}
-
-
-#[derive(Clone, Debug)]
-pub struct Vec3
-{
-    pub x: f32,
-    pub y: f32,
-    pub z: f32
-}
-
-impl Vec3
-{
-    pub fn new(x: f32, y: f32, z: f32) -> Self
-    {
-        Self { x, y, z }
-    }
-
-    pub fn add(&self, b: &Vec3) -> Vec3
-    {
-        Vec3
-        {
-            x: self.x + b.x,
-            y: self.y + b.y,
-            z: self.z + b.z
-        }
-    }
-
-    pub fn len(&self) -> f32
-    {
-        self.square_len().sqrt()
-    }
-
-    pub fn normalize(&mut self)
-    {
-        let magnitude = self.len();
-        self.x /= magnitude;
-        self.y /= magnitude;
-        self.z /= magnitude;
-    }
-
-    pub fn square_len(&self) -> f32
-    {
-        (self.x * self.x) + (self.y * self.y) + (self.z * self.z)
-    }
-
-    pub fn sub(&self, b: Vec3) -> Vec3
-    {
-        Vec3
-        {
-            x: self.x - b.x,
-            y: self.y - b.y,
-            z: self.z - b.z
         }
     }
 }

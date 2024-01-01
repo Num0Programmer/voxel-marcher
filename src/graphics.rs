@@ -1,5 +1,6 @@
 use crate::color::{Color, NO_COLOR};
-use crate::types::{Vec3, VoxelGrid};
+use crate::types::VoxelGrid;
+use crate::vector::Vec3;
 
 pub fn raymarch(ray: &Vec3, grid: &VoxelGrid) -> Color
 {
