@@ -9,4 +9,3 @@ name = "voxel_marcher"
 path = "src/lib.rs"
 
 [dependencies]
-winit = "0.29.8"

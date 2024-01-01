@@ -11,5 +11,4 @@ the central processing unit (CPU) to render 3-dimensional geometry.
 ## Install on Unix
 Details to come
 
-## Software
-- [winit](https://crates.io/crates/winit)
+## Dependencies
