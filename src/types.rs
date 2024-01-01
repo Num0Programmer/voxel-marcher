@@ -15,7 +15,7 @@ impl Viewport
     {
         Self
         {
-            extent: [1200, 1000],
+            extent: [800, 600],
             plane: [2.0, 2.0]
         }
     }
