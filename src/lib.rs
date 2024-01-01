@@ -18,6 +18,8 @@ pub mod ppm
         buf.iter().for_each(|color|
         {
             writeln!(&mut file, "{}", color[0]).unwrap();
+            writeln!(&mut file, "{}", color[1]).unwrap();
+            writeln!(&mut file, "{}", color[2]).unwrap();
         });
     }
 }

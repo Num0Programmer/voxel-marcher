@@ -47,9 +47,9 @@ fn main()
 
         let mut image = Vec::new();
 
-        for j in 0..viewport.extent[1]
+        for j in 0..=viewport.extent[1]
         {
-            for i in 0..viewport.extent[0]
+            for i in 0..=viewport.extent[0]
             {
                 let pij = p1m
                     .add(&qx.scalar(i as f32 - 1.0))
