@@ -1,6 +1,7 @@
 use voxel_marcher::{
     color::{Color, BLUE, NO_COLOR, RED},
     graphics::*,
+    ppm::write_ppm3,
     types::*,
     vector::{Vec3, UP}
 };
@@ -27,7 +28,7 @@ fn main()
         ]
     };
 
-    let frame: Vec<Color> =
+    let buffer: Vec<Color> =
     {
         // prerequisite calculations
         let E = Vec3::new(0.0, 0.0, -1.0);  // viewport position
@@ -61,4 +62,6 @@ fn main()
 
         image
     };
+
+    write_ppm3("sample.ppm", &buffer, viewport.extent[0], viewport.extent[1]);
 }
