@@ -1,7 +1,8 @@
 pub mod color;
 pub mod graphics;
-pub mod types;
+pub mod viewport;
 pub mod vector;
+pub mod voxel;
 
 pub mod ppm
 {
